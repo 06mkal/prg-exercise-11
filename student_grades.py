@@ -42,8 +42,13 @@ class StudentsGrades:
 
 def main():
     results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
-    count = len(results)
-    for index, score in enumerate(results):
+    print(f"Test psalo: {results.count()} studentu")
+    for index, score in enumerate(results.scores):
+        znamka = results.get_grade(index)
+        print(f"Student {index}: {score} points – {znamka}")
+
+    print(f"Studenti se 100 body: {results.find(100)}")
+    print(f"Seřažený seznam bodů: {results.get_sorted()}")
 
 
 
@@ -51,5 +56,4 @@ def main():
 if __name__ == "__main__":
     results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
 
-    print(results.get_sorted())  # [38, 42, 50, 58, 67, 73, 85, 91, 100]
-    print(results.scores)  # [85, 42, 91, 67, 50, 73, 100, 38, 58]  ← beze změny
+    print(main())
