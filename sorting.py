@@ -18,7 +18,22 @@ def selection_sort(values):
     return values
 
 
+def bubble_sort(values):
+
+    for j in range(len(values)):
+        for i in range(len(values)-1):
+            if values[i] > values[i+1]:
+                values[i], values[i+1] = values[i+1], values[i]
+        print(values)
+    return (values)
+
+
+
+
+
+
 
 if __name__ == "__main__":
     values = random_numbers(10)
-    selection_sort(values)
+    #selection_sort(values)
+    bubble_sort(values)
